@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PolygonShape.h"
+
 @interface HPViewController : UIViewController
+
+@property (retain, nonatomic) IBOutlet UILabel *numberOfSidesLabel;
+@property (retain, nonatomic) IBOutlet UIButton *decreaseButton;
+@property (retain, nonatomic) IBOutlet UIButton *increaseButton;
+@property (retain, nonatomic) IBOutlet PolygonShape *polygonShape;
+
+- (IBAction)decrease:(id)sender;
+- (IBAction)increase:(id)sender;
 
 @end

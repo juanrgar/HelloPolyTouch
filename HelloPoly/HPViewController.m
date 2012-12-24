@@ -9,6 +9,10 @@
 #import "HPViewController.h"
 
 @implementation HPViewController
+@synthesize polygonShape;
+@synthesize numberOfSidesLabel;
+@synthesize decreaseButton;
+@synthesize increaseButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,6 +30,10 @@
 
 - (void)viewDidUnload
 {
+    [self setNumberOfSidesLabel:nil];
+    [self setDecreaseButton:nil];
+    [self setIncreaseButton:nil];
+    [self setPolygonShape:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -55,6 +63,24 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)dealloc
+{
+    [numberOfSidesLabel release];
+    [decreaseButton release];
+    [increaseButton release];
+    [polygonShape release];
+    [super dealloc];
+}
+- (IBAction)decrease:(id)sender
+{
+    NSLog(@"I'm the decrease method");
+}
+
+- (IBAction)increase:(id)sender
+{
+    NSLog(@"I'm the increase method");
 }
 
 @end

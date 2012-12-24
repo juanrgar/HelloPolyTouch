@@ -15,6 +15,7 @@
 		98F18CB516885114008A2022 /* HPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F18CB416885114008A2022 /* HPAppDelegate.m */; };
 		98F18CB816885114008A2022 /* HPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F18CB716885114008A2022 /* HPViewController.m */; };
 		98F18CBB16885114008A2022 /* HPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98F18CB916885114008A2022 /* HPViewController.xib */; };
+		98F18CC316885555008A2022 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F18CC216885555008A2022 /* PolygonShape.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		98F18CA416885114008A2022 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98F18CA616885114008A2022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		98F18CA816885114008A2022 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		98F18CAC16885114008A2022 /* HelloPoly-Info.plist */ = {isa = PBXFileReference; path = "HelloPoly-Info.plist"; sourceTree = "<group>"; };
+		98F18CAC16885114008A2022 /* HelloPoly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloPoly-Info.plist"; sourceTree = "<group>"; };
 		98F18CAE16885114008A2022 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		98F18CB016885114008A2022 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		98F18CB216885114008A2022 /* HelloPoly-Prefix.pch */ = {isa = PBXFileReference; path = "HelloPoly-Prefix.pch"; sourceTree = "<group>"; };
-		98F18CB316885114008A2022 /* HPAppDelegate.h */ = {isa = PBXFileReference; path = HPAppDelegate.h; sourceTree = "<group>"; };
+		98F18CB216885114008A2022 /* HelloPoly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloPoly-Prefix.pch"; sourceTree = "<group>"; };
+		98F18CB316885114008A2022 /* HPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAppDelegate.h; sourceTree = "<group>"; };
 		98F18CB416885114008A2022 /* HPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAppDelegate.m; sourceTree = "<group>"; };
-		98F18CB616885114008A2022 /* HPViewController.h */ = {isa = PBXFileReference; path = HPViewController.h; sourceTree = "<group>"; };
+		98F18CB616885114008A2022 /* HPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPViewController.h; sourceTree = "<group>"; };
 		98F18CB716885114008A2022 /* HPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPViewController.m; sourceTree = "<group>"; };
 		98F18CBA16885114008A2022 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HPViewController.xib; sourceTree = "<group>"; };
+		98F18CC116885555008A2022 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolygonShape.h; path = HelloPoly/PolygonShape.h; sourceTree = "<group>"; };
+		98F18CC216885555008A2022 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PolygonShape.m; path = HelloPoly/PolygonShape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 		98F18C9516885114008A2022 = {
 			isa = PBXGroup;
 			children = (
+				98F18CC116885555008A2022 /* PolygonShape.h */,
+				98F18CC216885555008A2022 /* PolygonShape.m */,
 				98F18CAA16885114008A2022 /* HelloPoly */,
 				98F18CA316885114008A2022 /* Frameworks */,
 				98F18CA116885114008A2022 /* Products */,
@@ -163,6 +168,7 @@
 				98F18CB116885114008A2022 /* main.m in Sources */,
 				98F18CB516885114008A2022 /* HPAppDelegate.m in Sources */,
 				98F18CB816885114008A2022 /* HPViewController.m in Sources */,
+				98F18CC316885555008A2022 /* PolygonShape.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

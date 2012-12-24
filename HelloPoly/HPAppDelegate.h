@@ -13,7 +13,6 @@
 @interface HPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) HPViewController *viewController;
 
 @end
