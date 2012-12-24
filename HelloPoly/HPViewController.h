@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "PolygonShape.h"
+#import "PolygonView.h"
 
 @interface HPViewController : UIViewController
 
@@ -16,6 +17,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *decreaseButton;
 @property (retain, nonatomic) IBOutlet UIButton *increaseButton;
 @property (retain, nonatomic) IBOutlet PolygonShape *polygonShape;
+@property (retain, nonatomic) IBOutlet PolygonView *polygonView;
 
 - (IBAction)decrease:(id)sender;
 - (IBAction)increase:(id)sender;

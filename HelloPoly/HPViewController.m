@@ -9,7 +9,9 @@
 #import "HPViewController.h"
 
 @implementation HPViewController
+
 @synthesize polygonShape;
+@synthesize polygonView;
 @synthesize numberOfSidesLabel;
 @synthesize decreaseButton;
 @synthesize increaseButton;
@@ -20,20 +22,49 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)updateInterface
+{
+    int numberOfSides = self.polygonShape.numberOfSides;
+    
+    if (numberOfSides == self.polygonShape.maximumNumberOfSides) {
+        self.increaseButton.enabled = NO;
+    } else {
+        self.increaseButton.enabled = YES;
+    }
+    if (numberOfSides == self.polygonShape.minimumNumberOfSides) {
+        self.decreaseButton.enabled = NO;
+    } else {
+        self.decreaseButton.enabled = YES;
+    }
+    
+    self.numberOfSidesLabel.text = [NSString stringWithFormat:@"%d", numberOfSides];
+    
+    [self.polygonView setNeedsDisplay];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
+    NSLog(@"viewDidLoad called");
+    
+    self.polygonView.model = self.polygonShape;
+    [self updateInterface];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
+    NSLog(@"viewDidUnload called");
+    
     [self setNumberOfSidesLabel:nil];
     [self setDecreaseButton:nil];
     [self setIncreaseButton:nil];
+    self.polygonView = nil;
     [self setPolygonShape:nil];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -70,17 +101,25 @@
     [numberOfSidesLabel release];
     [decreaseButton release];
     [increaseButton release];
+    [polygonView release];
     [polygonShape release];
     [super dealloc];
 }
+
 - (IBAction)decrease:(id)sender
 {
     NSLog(@"I'm the decrease method");
+
+    self.polygonShape.numberOfSides--;
+    [self updateInterface];
 }
 
 - (IBAction)increase:(id)sender
 {
     NSLog(@"I'm the increase method");
+    
+    self.polygonShape.numberOfSides++;
+    [self updateInterface];
 }
 
 @end

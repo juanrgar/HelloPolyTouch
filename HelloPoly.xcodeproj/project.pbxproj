@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98E2886716885F09001A312E /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2886616885F09001A312E /* PolygonView.m */; };
 		98F18CA516885114008A2022 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F18CA416885114008A2022 /* UIKit.framework */; };
 		98F18CA716885114008A2022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F18CA616885114008A2022 /* Foundation.framework */; };
 		98F18CA916885114008A2022 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F18CA816885114008A2022 /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98E2886516885F09001A312E /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
+		98E2886616885F09001A312E /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
 		98F18CA016885114008A2022 /* HelloPoly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloPoly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F18CA416885114008A2022 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98F18CA616885114008A2022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 				98F18CB616885114008A2022 /* HPViewController.h */,
 				98F18CB716885114008A2022 /* HPViewController.m */,
 				98F18CB916885114008A2022 /* HPViewController.xib */,
+				98E2886516885F09001A312E /* PolygonView.h */,
+				98E2886616885F09001A312E /* PolygonView.m */,
 				98F18CAB16885114008A2022 /* Supporting Files */,
 			);
 			path = HelloPoly;
@@ -169,6 +174,7 @@
 				98F18CB516885114008A2022 /* HPAppDelegate.m in Sources */,
 				98F18CB816885114008A2022 /* HPViewController.m in Sources */,
 				98F18CC316885555008A2022 /* PolygonShape.m in Sources */,
+				98E2886716885F09001A312E /* PolygonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +284,7 @@
 				98F18CC016885114008A2022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

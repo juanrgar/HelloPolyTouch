@@ -10,4 +10,11 @@
 
 @interface PolygonShape : NSObject
 
+@property (nonatomic) int numberOfSides;
+@property (nonatomic) int minimumNumberOfSides;
+@property (nonatomic) int maximumNumberOfSides;
+
+- (NSArray *)pointsInRect:(CGRect)rect;
+- (void)saveState;
+
 @end
