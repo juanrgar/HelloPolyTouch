@@ -13,6 +13,8 @@
 @synthesize numberOfSides = _numberOfSides;
 @synthesize minimumNumberOfSides = _minimumNumberOfSides;
 @synthesize maximumNumberOfSides = _maximumNumberOfSides;
+@synthesize lineStyle;
+@synthesize fillColor;
 
 + (NSArray *)pointsForPolygonInRect:(CGRect)rect numberOfSides:(int)numberOfSides
 {
@@ -44,29 +46,7 @@
     }
 }
 
-- (void)awakeFromNib
-{
-    NSLog(@"PolygonShape awakened");
-    
-    self.minimumNumberOfSides = 3;
-    self.maximumNumberOfSides = 12;
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.numberOfSides = [defaults integerForKey:@"numberOfSides"];
-}
-
-- (NSArray *)pointsInRect:(CGRect)rect
-{
-    return [PolygonShape pointsForPolygonInRect:rect numberOfSides:self.numberOfSides];
-}
-
-- (void)saveState
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:self.numberOfSides forKey:@"numberOfSides"];
-}
-
--(NSString *)name {
+- (NSString *)name {
 	NSString *str = nil;
     NSString *ret = nil;
     
@@ -106,6 +86,32 @@
     }
 	ret = [[[NSString alloc] initWithString:str] autorelease];
 	return ret;
+}
+
+- (void)awakeFromNib
+{
+    NSLog(@"PolygonShape awakened");
+    
+    self.minimumNumberOfSides = 3;
+    self.maximumNumberOfSides = 12;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.numberOfSides = [defaults integerForKey:@"numberOfSides"];
+    self.lineStyle = [defaults integerForKey:@"lineStyle"];
+    self.fillColor = [defaults integerForKey:@"fillColor"];
+}
+
+- (NSArray *)pointsInRect:(CGRect)rect
+{
+    return [PolygonShape pointsForPolygonInRect:rect numberOfSides:self.numberOfSides];
+}
+
+- (void)saveState
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:self.numberOfSides forKey:@"numberOfSides"];
+    [defaults setInteger:self.lineStyle forKey:@"lineStyle"];
+    [defaults setInteger:self.fillColor forKey:@"fillColor"];
 }
 
 @end

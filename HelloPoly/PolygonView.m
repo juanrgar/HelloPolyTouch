@@ -27,6 +27,11 @@
 {
     NSLog(@"drawRect: called");
     
+    NSArray *fillColors = [NSArray arrayWithObjects:[UIColor redColor],
+                           [UIColor blueColor],
+                           [UIColor greenColor],
+                           [UIColor yellowColor], nil];
+    
     CGPoint p;
     NSArray *points = [model pointsInRect:rect];
     CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -42,10 +47,14 @@
     
     CGContextClosePath(ctx);
     
-    [[UIColor redColor] setFill];
+    if (self.model.lineStyle == Dashed) {
+        CGFloat lengths[2] = {10.0f, 10.0f};
+        CGContextSetLineDash(ctx, 0.0f, lengths, 2);
+    }
+    
+    [[fillColors objectAtIndex:self.model.fillColor] setFill];
     [[UIColor blackColor] setStroke];
     CGContextDrawPath(ctx, kCGPathFillStroke);
 }
-
 
 @end
