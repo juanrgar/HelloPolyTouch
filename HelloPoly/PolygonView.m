@@ -54,6 +54,7 @@
     
     [[fillColors objectAtIndex:self.model.fillColor] setFill];
     [[UIColor blackColor] setStroke];
+    CGContextSetLineWidth(ctx, 5.0f);
     CGContextDrawPath(ctx, kCGPathFillStroke);
 }
 

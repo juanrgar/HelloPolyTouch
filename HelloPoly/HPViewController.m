@@ -217,7 +217,6 @@
             title = @"None";
             break;
     }
-    
     return title;
 }
 
