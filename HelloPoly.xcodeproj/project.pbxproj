@@ -35,8 +35,8 @@
 		98F18CB616885114008A2022 /* HPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPViewController.h; sourceTree = "<group>"; };
 		98F18CB716885114008A2022 /* HPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPViewController.m; sourceTree = "<group>"; };
 		98F18CBA16885114008A2022 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HPViewController.xib; sourceTree = "<group>"; };
-		98F18CC116885555008A2022 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolygonShape.h; path = HelloPoly/PolygonShape.h; sourceTree = "<group>"; };
-		98F18CC216885555008A2022 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PolygonShape.m; path = HelloPoly/PolygonShape.m; sourceTree = "<group>"; };
+		98F18CC116885555008A2022 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
+		98F18CC216885555008A2022 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,6 @@
 		98F18C9516885114008A2022 = {
 			isa = PBXGroup;
 			children = (
-				98F18CC116885555008A2022 /* PolygonShape.h */,
-				98F18CC216885555008A2022 /* PolygonShape.m */,
 				98F18CAA16885114008A2022 /* HelloPoly */,
 				98F18CA316885114008A2022 /* Frameworks */,
 				98F18CA116885114008A2022 /* Products */,
@@ -92,6 +90,8 @@
 				98F18CB916885114008A2022 /* HPViewController.xib */,
 				98E2886516885F09001A312E /* PolygonView.h */,
 				98E2886616885F09001A312E /* PolygonView.m */,
+				98F18CC116885555008A2022 /* PolygonShape.h */,
+				98F18CC216885555008A2022 /* PolygonShape.m */,
 				98F18CAB16885114008A2022 /* Supporting Files */,
 			);
 			path = HelloPoly;
